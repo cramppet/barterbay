@@ -1,0 +1,23 @@
+<ion-view view-title="Edit Post">
+  <ion-content>
+    <div class="list list-inset">
+    	<form ng-submit="savePost(this)">
+				<label class="item item-input item-dark">
+					Your posting:
+				</label>
+
+				<label class="item item-input">
+					<input ng-model="newTitle" type="text">
+				</label>
+
+				<label class="item item-body item-input">
+					<textarea ng-model="newDescription"></textarea>
+				</label>
+
+				<button class="button button-outline button-block button-balanced">
+					Save Post
+				</button>
+			</form>
+		</div>
+  </ion-content>
+</ion-view>

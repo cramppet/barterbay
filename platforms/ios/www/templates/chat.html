@@ -1,0 +1,16 @@
+<ion-view view-title="{{ toUser.split('@')[0] || 'Begin Chatting' }}">
+	<ion-content class="padding">
+    <ul class="conversation" id="conversation">
+      <li ng-repeat="message in messages" class="message" ng-class="{ 'self': message.sender === username, 'other': message.sender !== username }">
+        {{message.body}}
+      </li>
+    </ul>
+
+    <div class="footer-padding"></div>
+  </ion-content>
+</ion-view>
+
+<ion-footer-bar>
+    <textarea ng-model="message" placeholder="Type a message here ... " style="width: 85%;"></textarea>
+    <button ng-click="sendMessage()" class="button button-positive icon ion-paper-airplane pull-right"></button>
+</ion-footer-bar>

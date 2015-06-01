@@ -1,0 +1,33 @@
+<ion-view view-title="Barter Posting">
+  <ion-content>
+		<div class="list card">
+		  <div class="item item-avatar">
+		    <img src="img/avatar.png">
+		    <h2>{{post.poster}}</h2>
+		  </div>
+
+		  <label class="item item-stacked-label item-text-wrap">
+		  	<span class="input-label"><strong>Title:</strong></span>
+		  	<p>{{post.title}}</p>
+		  </label>
+
+		  <label class="item item-stacked-label item-text-wrap">
+		  	<span class="input-label"><strong>Description:</strong></span>
+		  	<p>{{post.description}}</p>
+		  </label>
+		</div>
+
+		<div class="card">
+		  <div class="item item-text-wrap">
+		  	<i class="ion-alert-circled"></i><strong> Warning: </strong> NEVER give other users any confidential information
+		  	over the BarterBay chat system or give out your password for any reason.
+		  </div>
+		</div>
+  </ion-content>
+</ion-view>
+
+<ion-footer-bar>
+    <button ng-click="startConversation()" class="button button-balanced" style="width: 100%;">
+    	Barter! <i class="ion-arrow-swap"></i>
+    </button>
+</ion-footer-bar>

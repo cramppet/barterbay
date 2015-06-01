@@ -1,0 +1,28 @@
+<ion-view view-title="Barter Board">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <i class="ion-information-circled"></i><strong> Note: </strong>You will not see your own postings listed here.
+      </div>
+    </div>
+
+    <div ng-repeat="post in posts" class="list card">
+      <a class="no-underline" href="#/app/barterboard/{{post._id}}">
+        <div class="item item-divider">
+          <h2><strong>{{post.title}}</strong></h2>
+        </div>
+        <div class="item">
+          <p>{{post.description}}</p>
+          <br/>
+          <p><i class="ion-person"></i><strong> Poster: </strong>{{post.poster}}</p>
+        </div>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
+
+<ion-footer-bar>
+    <button ng-click="refresh()" class="button button-positive" style="width: 100%;">
+      Refresh Posts <i class="ion-refresh"></i>
+    </button>
+</ion-footer-bar>

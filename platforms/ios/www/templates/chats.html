@@ -1,0 +1,12 @@
+<ion-view view-title="Chats">
+	<ion-content>
+    <div class="list">
+      <a ng-repeat="chat in chats" class="item item-avatar item-icon-right" href="#/app/chats/{{chat._id}}">
+        <img src="img/avatar.png">
+        <h2 class="username">{{ chat.sender === username ? chat.reciever.split('@')[0] : chat.sender.split('@')[0] }}</h2>
+        <p>{{chat.messages[chat.messages.length - 1].body}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

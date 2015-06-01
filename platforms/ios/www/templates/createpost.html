@@ -1,0 +1,27 @@
+<ion-view view-title="Create New Post">
+  <ion-content class="padding">
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="text" ng-model="post.title" placeholder="Post Title">
+		  </label>
+		  <label class="item item-input">
+		    <textarea rows="10" ng-model="post.description" placeholder="Post Description"></textarea>
+		  </label>
+		</div>
+
+		<div class="card">
+		  <div class="item item-divider">
+		    BarterBay Notice:
+		  </div>
+		  <div class="item item-text-wrap">
+		    By clicking the "Create Post" button are you agreeing to all of BarterBay's
+		    terms and conditions. You may review these terms and conditions under the
+		    terms and conditions page found in the side menu.
+		  </div>
+		</div>
+  </ion-content>
+</ion-view>
+
+<ion-footer-bar>
+    <button ng-click="createPost()" class="button button-balanced" style="width: 100%;">Create Post</button>
+</ion-footer-bar>

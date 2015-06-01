@@ -1,0 +1,37 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" ng-model="loginData.email" placeholder="username@email.com">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="loginData.password" placeholder="password">
+      </label>
+      <label class="item">
+        <button ng-click="doLogin()" class="button button-block button-positive" type="submit">Log in</button>
+      </label>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div class="col">
+          <h4>Don't have a BarterBay account?</h4>
+          <button ng-click="register()" class="button button-outline button-balanced">Register</button>
+        </div>
+        <div class="col">
+          <h4>Or sign in using one of these accounts:</h4>
+          <a ng-click="authenticate('google')"><img src="img/gplus.png" style="width: 64px; height: 64px;"></a>
+          <a ng-click="authenticate('facebook')"><img src="img/facebook.png" style="width: 64px; height: 64px;"></a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>
